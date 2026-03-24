@@ -1,0 +1,1 @@
+C:\Users\Felipe\ PC\Documents\VS\Rust\Aula\target\debug\mega_store_search.exe: C:\Users\Felipe\ PC\Documents\VS\Rust\Aula\src\catalogo.rs C:\Users\Felipe\ PC\Documents\VS\Rust\Aula\src\lib.rs C:\Users\Felipe\ PC\Documents\VS\Rust\Aula\src\main.rs C:\Users\Felipe\ PC\Documents\VS\Rust\Aula\src\recomendacao.rs
