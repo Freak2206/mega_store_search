@@ -9,7 +9,7 @@ fn test_busca_produto() {
     assert!(produto.is_some());
     assert_eq!(produto.unwrap().descricao, "Computador portátil");
 
-    assert_eq!(catalogo.buscar("Smartphone"), None);
+    assert!(catalogo.buscar("Smartphone").is_none());
 }
 
 #[test]

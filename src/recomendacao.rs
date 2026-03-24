@@ -1,23 +1,22 @@
 use std::collections::HashMap;
 
 pub struct Recomendacao {
-    grafo: HashMap<String, Vec<String>>,
+    mapa: HashMap<String, Vec<String>>,
 }
 
 impl Recomendacao {
     pub fn new() -> Self {
-        Recomendacao {
-            grafo: HashMap::new(),
-        }
+        Recomendacao { mapa: HashMap::new() }
     }
 
-    pub fn adicionar(&mut self, produto: &str, relacionado: &str) {
-        self.grafo.entry(produto.to_string())
+    pub fn adicionar(&mut self, produto: &str, recomendado: &str) {
+        self.mapa.entry(produto.to_string())
             .or_insert(Vec::new())
-            .push(relacionado.to_string());
+            .push(recomendado.to_string());
     }
 
-    pub fn obter(&self, produto: &str) -> Option<&Vec<String>> {
-        self.grafo.get(produto)
+    /// Método padronizado para obter recomendações
+    pub fn sugerir(&self, produto: &str) -> Vec<String> {
+        self.mapa.get(produto).cloned().unwrap_or_default()
     }
 }

@@ -144,7 +144,8 @@ recomendacoes.adicionar("Aspirador", "Filtro de ar");
                 let mut nome = String::new();
                 io::stdin().read_line(&mut nome).unwrap();
                 let nome = nome.trim();
-                if let Some(lista) = recomendacoes.obter(nome) {
+                let lista = recomendacoes.sugerir(nome);
+                if !lista.is_empty() {
                     println!("Quem compra {} também vê: {:?}", nome, lista);
                 } else {
                     println!("Sem recomendações para este produto.");

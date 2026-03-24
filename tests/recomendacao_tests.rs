@@ -11,7 +11,6 @@ fn test_recomendacoes() {
     assert!(sugestoes.contains(&"Mouse".to_string()));
     assert!(sugestoes.contains(&"Capa".to_string()));
 
-    // Produto sem recomendações
     let vazio = rec.sugerir("Smartphone");
     assert_eq!(vazio.len(), 0);
 }
