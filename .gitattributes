@@ -1,0 +1,11 @@
+# Forçar arquivos Rust a serem reconhecidos corretamente
+*.rs linguist-language=Rust
+
+# Ignorar Makefile na contagem de linguagens
+Makefile linguist-detectable=false
+
+# Ignorar arquivos que possam ser confundidos com DTrace
+*.d linguist-detectable=false
+
+# Se quiser também ignorar arquivos de configuração
+*.toml linguist-detectable=false
